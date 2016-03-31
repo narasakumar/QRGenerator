@@ -86,7 +86,7 @@ function deleteItemAll(){
 	
 		var table = document.getElementById("notes");
 		
-		for(i = 0; i < table.rows.length; ++i){
+		for(i = 0; i < table.rows.length; i++){
 			
 			alert('table.rows.length='+table.rows.length);
 			
