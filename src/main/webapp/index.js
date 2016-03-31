@@ -42,7 +42,10 @@ function addItem(item, isNew){
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 
 	if (elText.value) {
-		saveChange(elText);
+
+		row.childNodes[0];
+		saveChange(row.childNodes[0]);
+
 
 			row.innerHTML = "<td style='width:90%'><textarea'>"+elText.value+"</textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
