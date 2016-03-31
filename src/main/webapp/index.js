@@ -132,7 +132,7 @@ function makeCode () {
 	}
 	
 	qrcode.makeCode(elText.value);
-	//addItem();
+	addItem();
 }
 
 updateServiceInfo();
