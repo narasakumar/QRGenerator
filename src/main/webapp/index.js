@@ -106,10 +106,13 @@ function deleteItemAll(){
 	}, function(err){
 		console.error(err);
 	});
+	
+	
+			
+	row.parentNode.removeChild(row);
 		}
 
-			
-	row.parentNode.removeChild(row);
+	
 	
 
 	
