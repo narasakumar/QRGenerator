@@ -42,13 +42,32 @@
 	<div class = "center">
 	<header>
 					<div class='title'>
-						Java DB Web Starter
-						<button class='detailBtn' onclick="toggleServiceInfo()"
+						Recent History
+						<!-- <button class='detailBtn' onclick="toggleServiceInfo()"
 							title='toggle service info'>
 							<img src='images/detail.png' alt='detail' />
 						</button>
+						 -->
 					</div>
 				</header>
+				
+				<table id='notes' class='records'><tbody></tbody></table>
+				<div id="loading">&nbsp;&nbsp;Please wait while the database is being initialized ...</div>
+				<footer>
+					<div class='tips'>
+						Click the Add button to add a record.
+						<button class='addBtn' onclick="addItem()" title='add record'>
+							<img src='images/add.png' alt='add' />
+						</button>
+					</div>
+					
+					<hr><hr><hr>
+					
+					<div>
+						<a href = "/QRCodeHouse.html">QR Code House</a>
+					</div>
+				</footer> 
+				
 				<section id='dbserviceinfo' style='display: none;'>
 					<table class = "todolist">
 						<tbody>
@@ -83,26 +102,12 @@
 						</tbody>
 					</table>
 				</section>
-				<table id='notes' class='records'><tbody></tbody></table>
-				<div id="loading">&nbsp;&nbsp;Please wait while the database is being initialized ...</div>
-				<footer>
-					<div class='tips'>
-						Click the Add button to add a record.
-						<button class='addBtn' onclick="addItem()" title='add record'>
-							<img src='images/add.png' alt='add' />
-						</button>
-					</div>
-					
-					<hr><hr><hr>
-					
-					<div>
-						<a href = "/QRCodeHouse.html">QR Code House</a>
-					</div>
-				</footer> 
+				
+				
 				
 				<script type="text/javascript" src="util.js"></script> 
 				<script type="text/javascript" src="index.js"></script>
-				<script	type="text/javascript" src="qrCodeHouse.js"></script>
+				<!--<script	type="text/javascript" src="qrCodeHouse.js"></script>-->
 
 					
 					</div>
