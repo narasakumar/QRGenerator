@@ -38,8 +38,8 @@ function addItem(item, isNew){
 	//row.innerHTML = "<td style='width:90%'><textarea onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
 	//	"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 	
-	row.innerHTML = "<td style='width:90%'><textarea  onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
-		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
+	row.innerHTML = "<td style='width:90%'><textarea ></textarea></td>" +
+		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete this'></td>";
 
 	if (elText.value) {
 
@@ -50,20 +50,18 @@ function addItem(item, isNew){
 		alert('row.childNodes[0].childNodes[0]'+row.childNodes[0].childNodes[0]);
 		alert('row.childNodes[0].childNodes[1]'+row.childNodes[0].childNodes[1]);
 	*/			
-
-
-
-			row.innerHTML = "<td style='width:90%'><textarea  onblur='saveChange(this)' onkeydown='onKey(event)'>"+elText.value+"</textarea></td>" +
-		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
+			row.innerHTML = "<td style='width:90%'><textarea  onblur='saveChange(this)'>"+elText.value+"</textarea></td>" +
+							"<td class='deleteBtn' onclick='deleteItem(this)' title='delete this'></td>";
 		
 			var textarea=row.childNodes[0].childNodes[0];
+			//textarea.readOnly=true;
 			//textarea.addEventListener("focusout", saveChange(textarea));
 		
 			//saveChangeNew(textarea);
-		
-
 	}
 		
+	row.childNodes[0].childNodes[0].readOnly=true;	
+	
 	var table = document.getElementById('notes');
 	console.log(table.lastChild);
 	table.lastChild.appendChild(row);
