@@ -97,6 +97,8 @@ function deleteItemAll(){
 			}
 		}
 		for(i = 0; i < items.length; ++i){
+			
+			alert('items['+i+']'+'='+items[i]);
 			deleteItem(items[i]);
 		}
 	}, function(err){
