@@ -132,6 +132,8 @@ function makeCode () {
 	}
 	
 	qrcode.makeCode(elText.value);
+	
+	saveChange(elText.value);
 	addItem();
 }
 
