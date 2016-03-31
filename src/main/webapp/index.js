@@ -43,13 +43,14 @@ function addItem(item, isNew){
 
 	if (elText.value) {
 
+/*
 		alert('row.childNodes[0]'+row.childNodes[0]);
 		alert('row.childNodes[1]'+row.childNodes[1]);
 		alert('row.childNodes[2]'+row.childNodes[2]);
 		alert('row.childNodes[0].childNodes[0]'+row.childNodes[0].childNodes[0]);
 		alert('row.childNodes[0].childNodes[1]'+row.childNodes[0].childNodes[1]);
-																
-		saveChange(row.childNodes[0]);
+	*/															
+		saveChange(row.childNodes[0].childNodes[0]);
 
 
 			row.innerHTML = "<td style='width:90%'><textarea'>"+elText.value+"</textarea></td>" +
