@@ -86,13 +86,15 @@ function deleteItemAll(){
 	
 		var table = document.getElementById("notes");
 		
+		alert('table.rows.length='+table.rows.length);
+		
 		for(i = 0; i < table.rows.length; i++){
 			
-			alert('table.rows.length='+table.rows.length);
+			alert('i='+i);
 			
 			var row=table.rows[i];
 						alert('row no'+i+'='+row.value);
-			var textarea=row.childNodes[i].childNodes[0];
+			var textarea=row.childNodes[0].childNodes[0];
 			
 			alert('textarea'+i+'='+textarea.value);
 			deleteItem(textarea);
