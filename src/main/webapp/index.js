@@ -117,29 +117,7 @@ function updateServiceInfo(){
 	});
 }
 
-function generateQR() {
-
-	makeCode();
-}
-
-var qrcode = new QRCode(document.getElementById("qrcode"), {
-	width : 100,
-	height : 100});
-
-function makeCode () {
-		alert('Generate button invoked');
-	var elText = document.getElementById("input_string_id");
-	
-	if (!elText.value) {
-		alert("Input a text");
-		elText.focus();
-		return;
-	}
-	
-	qrcode.makeCode(elText.value);
-}
-
 
 updateServiceInfo();
 loadItems();
-makeCode();
+
