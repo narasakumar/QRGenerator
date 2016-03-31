@@ -82,6 +82,31 @@ function deleteItem(deleteBtnNode){
 	});
 }
 
+function deleteItemAll(){
+	
+		xhrGet(REST_DATA, function(data){
+		document.getElementById("loading").innerHTML = "";
+		var receivedItems = data.body || [];
+		var items = [];
+		var i;
+		// Make sure the received items have correct format
+		for(i = 0; i < receivedItems.length; ++i){
+			var item = receivedItems[i];
+			if(item && 'id' in item && 'name' in item){
+				items.push(item);
+			}
+		}
+		for(i = 0; i < items.length; ++i){
+			deleteItem(items[i]);
+		}
+	}, function(err){
+		console.error(err);
+		document.getElementById("loading").innerHTML = "ERROR";
+	});
+	
+
+}
+
 function onKey(evt){
 	if(evt.keyCode == KEY_ENTER && !evt.shiftKey){
 		evt.stopPropagation();
