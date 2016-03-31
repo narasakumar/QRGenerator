@@ -84,6 +84,44 @@ function deleteItem(deleteBtnNode){
 
 function deleteItemAll(){
 	
+		var table = document.getElementById("notes");
+		
+		for(i = 0; i < table.rows.length; ++i){
+			
+			var row=table.childNodes[i];
+			var textarea=row.childNodes[0].childNodes[0];
+			
+			alert('textarea'+i+'='+textarea);
+			deleteItem(items[textarea]);
+		}
+		
+		
+		
+		for (var i = 0, cell; cell = table.cells[i]; i++) {
+     //iterate through cells
+     //cells would be accessed using the "cell" variable assigned in the for loop
+}
+		
+		for(i = 0; i < items.length; ++i){
+			
+			alert('items['+i+']'+'='+items[i]);
+			deleteItem(items[i]);
+		}
+
+
+    rows = table.rows, rowcount = rows.length, r,
+    cells, cellcount, c, cell;
+for( r=0; r<rowcount; r++) {
+    cells = rows[r].cells;
+    cellcount = cells.length;
+    for( c=0; c<cellcount; c++) {
+        cell = cells[c];
+        // now do something.
+    }
+}
+		
+		
+		/*
 		xhrGet(REST_DATA, function(data){
 		document.getElementById("loading").innerHTML = "";
 		var receivedItems = data.body || [];
@@ -105,7 +143,7 @@ function deleteItemAll(){
 		console.error(err);
 		document.getElementById("loading").innerHTML = "ERROR";
 	});
-	
+	*/
 
 }
 
