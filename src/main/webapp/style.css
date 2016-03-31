@@ -202,3 +202,10 @@ button {
 .fieldname {
 	text-align: right;
 }
+
+
+.QRCode {
+align:"center"; 
+padding-bottom: 100px;
+padding-top: 100px;
+}
