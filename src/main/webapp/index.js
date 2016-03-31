@@ -90,7 +90,7 @@ function deleteItemAll(){
 		
 		for(i = 0; i < table.rows.length; i++){
 			
-			//alert('i='+i);
+			alert('i='+i);
 			
 			var row=table.rows[i];
 						//alert('row no'+i+'='+row.value);
