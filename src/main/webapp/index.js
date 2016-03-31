@@ -38,7 +38,7 @@ function addItem(item, isNew){
 	//row.innerHTML = "<td style='width:90%'><textarea onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
 	//	"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 	
-	row.innerHTML = "<td style='width:90%'></td>" +
+	row.innerHTML = "<td style='width:90%'><textarea></textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 	
 	if (elText.value) {
