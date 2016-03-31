@@ -45,12 +45,6 @@ function addItem(item, isNew){
 	textarea.focus();
 }
 
-function sayHello()
-{
-	alert('Hello World');
-	
-}
-
 function deleteItem(deleteBtnNode){
 	var row = deleteBtnNode.parentNode;
 	row.parentNode.removeChild(row);
