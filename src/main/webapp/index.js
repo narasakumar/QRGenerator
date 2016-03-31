@@ -49,13 +49,15 @@ function addItem(item, isNew){
 		alert('row.childNodes[2]'+row.childNodes[2]);
 		alert('row.childNodes[0].childNodes[0]'+row.childNodes[0].childNodes[0]);
 		alert('row.childNodes[0].childNodes[1]'+row.childNodes[0].childNodes[1]);
-	*/															
-		saveChangeNew(row.childNodes[0].childNodes[0]);
+	*/			
+	var textarea=row.childNodes[0].childNodes[0];
+		saveChangeNew(textarea);
 
 
 			row.innerHTML = "<td style='width:90%'><textarea  onchange='saveChange(this)' onkeydown='onKey(event)'>"+elText.value+"</textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
-
+		
+		textarea.addEventListener("focusout", saveChange(textarea));
 	}
 		
 	var table = document.getElementById('notes');
@@ -119,7 +121,7 @@ function saveChangeNew(contentNode, callback){
 	var data = {
 		name: contentNode.value
 	};
-	alert('data in saveChangeNew(): '+data);
+	//alert('data in saveChangeNew(): '+data);
 	
 	if(row.isNew){
 		delete row.isNew;
