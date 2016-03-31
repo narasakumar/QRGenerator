@@ -43,7 +43,7 @@ function addItem(item, isNew){
 
 	if (elText.value) {
 
-		row.childNodes[0];
+		alert(row.childNodes[0];
 		saveChange(row.childNodes[0]);
 
 
