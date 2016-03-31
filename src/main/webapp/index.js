@@ -95,7 +95,7 @@ function deleteItemAll(){
 			var row=table.rows[i];
 						//alert('row no'+i+'='+row.value);
 			var textarea=row.childNodes[0].childNodes[0];
-			()
+			
 			alert('textarea'+i+'='+textarea.value);
 			//deleteItem(textarea);
 
@@ -107,7 +107,7 @@ function deleteItemAll(){
 
 	
 	xhrDelete(REST_DATA + '?id=' + row.getAttribute('data-id'), function(){
-	}, functio(n(err){
+	}, function(err){
 		console.error(err);
 	});
 		}
