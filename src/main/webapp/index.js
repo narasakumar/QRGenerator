@@ -118,6 +118,7 @@ function updateServiceInfo(){
 }
 
 function generateQR() {
+	alert('Generate button invoked');
 	makeCode();
 }
 
@@ -141,4 +142,4 @@ function makeCode () {
 
 updateServiceInfo();
 loadItems();
-
+makeCode();
