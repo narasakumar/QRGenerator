@@ -38,7 +38,7 @@ function addItem(item, isNew){
 	//row.innerHTML = "<td style='width:90%'><textarea onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
 	//	"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 	
-	row.innerHTML = "<td style='width:90%'><textarea></textarea></td>" +
+	row.innerHTML = "<td style='width:90%'><textarea  onchange='saveChange(this)' onkeydown='onKey(event)></textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 
 	if (elText.value) {
@@ -50,10 +50,10 @@ function addItem(item, isNew){
 		alert('row.childNodes[0].childNodes[0]'+row.childNodes[0].childNodes[0]);
 		alert('row.childNodes[0].childNodes[1]'+row.childNodes[0].childNodes[1]);
 	*/															
-		saveChange(row.childNodes[0].childNodes[0]);
+		saveChangeNew(row.childNodes[0].childNodes[0]);
 
 
-			row.innerHTML = "<td style='width:90%'><textarea'>"+elText.value+"</textarea></td>" +
+			row.innerHTML = "<td style='width:90%'><textarea  onchange='saveChange(this)' onkeydown='onKey(event)'>"+elText.value+"</textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 
 	}
@@ -96,6 +96,31 @@ function saveChange(contentNode, callback){
 	var data = {
 		name: contentNode.value
 	};
+	if(row.isNew){
+		delete row.isNew;
+		xhrPost(REST_DATA, data, function(item){
+			row.setAttribute('data-id', item.id);
+			callback && callback();
+		}, function(err){
+			console.error(err);
+		});
+	}else{
+		data.id = row.getAttribute('data-id');
+		xhrPut(REST_DATA, data, function(){
+			console.log('updated: ', data);
+		}, function(err){
+			console.error(err);
+		});
+	}
+}
+
+function saveChangeNew(contentNode, callback){
+	var row = contentNode.parentNode.parentNode;
+	var data = {
+		name: contentNode.value
+	};
+	alert('data in saveChangeNew(): '+data);
+	
 	if(row.isNew){
 		delete row.isNew;
 		xhrPost(REST_DATA, data, function(item){
