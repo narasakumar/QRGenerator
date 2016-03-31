@@ -90,17 +90,17 @@ function deleteItemAll(){
 		
 		for(i = 0; i < table.rows.length; i++){
 			
-			alert('i='+i);
+			//alert('i='+i);
 			
 			var row=table.rows[i];
 						//alert('row no'+i+'='+row.value);
 			var textarea=row.childNodes[0].childNodes[0];
 			
-			alert('textarea'+i+'='+textarea.value);
+			//alert('textarea'+i+'='+textarea.value);
 			//deleteItem(textarea);
 
 
-			alert('dataid for'+i+'is'+row.getAttribute('data-id'));
+			//alert('dataid for'+i+'is'+row.getAttribute('data-id'));
 			
 			xhrDelete(REST_DATA + '?id=' + row.getAttribute('data-id'), function(){
 			}, function(err){
@@ -110,6 +110,8 @@ function deleteItemAll(){
 		}
 
 		for(i = 0; i < table.rows.length; i++){
+			
+			var row=table.rows[i];
 			row.parentNode.removeChild(row);
 		}
 	
