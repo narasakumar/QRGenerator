@@ -28,12 +28,23 @@ function loadItems(){
 
 function addItem(item, isNew){
 	var row = document.createElement('tr');
+	var elText = document.getElementById("input_string_id");
+	
+	
 	var id = item && item.id;
 	if(id){
 		row.setAttribute('data-id', id);
 	}
-	row.innerHTML = "<td style='width:90%'><textarea onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
+	//row.innerHTML = "<td style='width:90%'><textarea onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
+	//	"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
+	
+	row.innerHTML = "<td style='width:90%'></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
+	
+	if (elText.value) {
+		saveChange(this);
+	}
+		
 	var table = document.getElementById('notes');
 	console.log(table.lastChild);
 	table.lastChild.appendChild(row);
@@ -133,7 +144,6 @@ function makeCode () {
 	
 	qrcode.makeCode(elText.value);
 	
-	saveChange(elText.value);
 	addItem();
 }
 
