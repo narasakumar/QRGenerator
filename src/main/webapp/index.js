@@ -118,7 +118,7 @@ function updateServiceInfo(){
 }
 
 function generateQR() {
-	alert('Generate button invoked');
+
 	makeCode();
 }
 
@@ -127,7 +127,8 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 	height : 100
 });
 
-function makeCode () {		
+function makeCode () {
+		alert('Generate button invoked');
 	var elText = document.getElementById("input_string_id");
 	
 	if (!elText.value) {
