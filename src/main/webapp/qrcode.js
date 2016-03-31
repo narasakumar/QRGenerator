@@ -580,8 +580,6 @@ var QRCode;
 	 */
 	QRCode.prototype.makeCode = function (sText) {
 		
-		alert('makeCode 583 line no');
-		
 		this._oQRCode = new QRCodeModel(_getTypeNumber(sText, this._htOption.correctLevel), this._htOption.correctLevel);
 		this._oQRCode.addData(sText);
 		this._oQRCode.make();
