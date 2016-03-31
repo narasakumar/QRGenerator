@@ -6,6 +6,7 @@ var KEY_ENTER = 13;
 
 
 function generateQR() {
+		alert('generateQR() method');
 	makeCode();
 }
 
@@ -14,7 +15,8 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 	height : 100
 });
 
-function makeCode () {		
+function makeCode () {
+	alert('makeCode() method');
 	var elText = document.getElementById("input_string_id");
 	
 	if (!elText.value) {
