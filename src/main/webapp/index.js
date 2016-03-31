@@ -86,18 +86,30 @@ function deleteItemAll(){
 	
 		var table = document.getElementById("notes");
 		
-		alert('table.rows.length='+table.rows.length);
+		//alert('table.rows.length='+table.rows.length);
 		
 		for(i = 0; i < table.rows.length; i++){
 			
-			alert('i='+i);
+			//alert('i='+i);
 			
 			var row=table.rows[i];
-						alert('row no'+i+'='+row.value);
+						//alert('row no'+i+'='+row.value);
 			var textarea=row.childNodes[0].childNodes[0];
-			
+			()
 			alert('textarea'+i+'='+textarea.value);
-			deleteItem(textarea);
+			//deleteItem(textarea);
+
+
+	alert('dataid for'+i+'is'+row.getAttribute('data-id'));
+			
+	row.parentNode.removeChild(row);
+	
+
+	
+	xhrDelete(REST_DATA + '?id=' + row.getAttribute('data-id'), function(){
+	}, functio(n(err){
+		console.error(err);
+	});
 		}
 
 }
