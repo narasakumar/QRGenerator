@@ -42,7 +42,7 @@ function addItem(item, isNew){
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 	
 	if (elText.value) {
-		saveChange(this);
+		saveChange(elText);
 	}
 		
 	var table = document.getElementById('notes');
