@@ -53,11 +53,11 @@ function addItem(item, isNew){
 
 
 
-			row.innerHTML = "<td style='width:90%'><textarea  onchange='saveChange(this)' onkeydown='onKey(event)'>"+elText.value+"</textarea></td>" +
+			row.innerHTML = "<td style='width:90%'><textarea  onblur='saveChange(this)' onkeydown='onKey(event)'>"+elText.value+"</textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 		
 			var textarea=row.childNodes[0].childNodes[0];
-			textarea.addEventListener("focusout", saveChange(textarea));
+			//textarea.addEventListener("focusout", saveChange(textarea));
 		
 			//saveChangeNew(textarea);
 		
