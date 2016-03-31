@@ -45,6 +45,27 @@ function addItem(item, isNew){
 	textarea.focus();
 }
 
+function sayHello()(item, isNew){
+	var row = document.createElement('tr');
+	var id = item && item.id;
+	if(id){
+		row.setAttribute('data-id', id);
+	}
+	row.innerHTML = "<td style='width:90%'><textarea onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
+		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
+	var table = document.getElementById('notes');
+	console.log(table.lastChild);
+	table.lastChild.appendChild(row);
+	var textarea = row.firstChild.firstChild;
+	if(item){
+		textarea.value = item.name;
+	}
+	row.isNew = !item || isNew;
+	textarea.focus();
+}
+
+
+
 function deleteItem(deleteBtnNode){
 	var row = deleteBtnNode.parentNode;
 	row.parentNode.removeChild(row);
