@@ -53,7 +53,7 @@ function addItem(item, isNew){
 			row.innerHTML = "<td style='width:90%'><textarea  onblur='saveChange(this)'>"+elText.value+"</textarea></td>" +
 							"<td class='deleteBtn' onclick='deleteItem(this)' title='delete this'></td>";
 		
-			var textarea=row.childNodes[0].childNodes[0];
+			//var textarea=row.childNodes[0].childNodes[0];
 			//textarea.readOnly=true;
 			//textarea.addEventListener("focusout", saveChange(textarea));
 		
@@ -92,35 +92,12 @@ function deleteItemAll(){
 			
 			var row=table.rows[i];
 						alert('row no'+i+'='+row.value);
-			var textarea=row.childNodes[0];
+			var textarea=row.childNodes[0].childNodes[0];
 			
 			alert('textarea'+i+'='+textarea.value);
 			deleteItem(items[textarea]);
 		}
-		
-		
-		
-		for (var i = 0, cell; cell = table.cells[i]; i++) {
-     //iterate through cells
-     //cells would be accessed using the "cell" variable assigned in the for loop
-}
-		
-		for(i = 0; i < items.length; ++i){
-			
-			alert('items['+i+']'+'='+items[i]);
-			deleteItem(items[i]);
-		}
 
-
-    rows = table.rows, rowcount = rows.length, r,
-    cells, cellcount, c, cell;
-for( r=0; r<rowcount; r++) {
-    cells = rows[r].cells;
-    cellcount = cells.length;
-    for( c=0; c<cellcount; c++) {
-        cell = cells[c];
-        // now do something.
-    }
 }
 		
 		
