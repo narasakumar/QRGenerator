@@ -101,10 +101,6 @@ function deleteItemAll(){
 
 
 	alert('dataid for'+i+'is'+row.getAttribute('data-id'));
-			
-	row.parentNode.removeChild(row);
-	
-
 	
 	xhrDelete(REST_DATA + '?id=' + row.getAttribute('data-id'), function(){
 	}, function(err){
@@ -112,6 +108,12 @@ function deleteItemAll(){
 	});
 		}
 
+			
+	row.parentNode.removeChild(row);
+	
+
+	
+	
 }
 		
 		
