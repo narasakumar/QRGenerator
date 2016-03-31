@@ -40,9 +40,13 @@ function addItem(item, isNew){
 	
 	row.innerHTML = "<td style='width:90%'><textarea></textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
-	
+
 	if (elText.value) {
 		saveChange(elText);
+
+			row.innerHTML = "<td style='width:90%'><textarea'>"+elText.value+"</textarea></td>" +
+		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
+
 	}
 		
 	var table = document.getElementById('notes');
