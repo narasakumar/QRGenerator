@@ -125,7 +125,6 @@ function deleteItemAll(){
 	});
 	*/
 
-}
 
 function onKey(evt){
 	if(evt.keyCode == KEY_ENTER && !evt.shiftKey){
