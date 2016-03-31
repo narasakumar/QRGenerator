@@ -206,6 +206,13 @@ button {
 
 .QRCode {
 align:"center"; 
-padding-bottom: 100px;
+padding-bottom: 10px;
 padding-top: 100px;
+padding-left: 30%;
+}
+.QRCodeElement {
+align:"center"; 
+padding-bottom: 10px;
+padding-top: 10px;
+padding-left: 40%;
 }
