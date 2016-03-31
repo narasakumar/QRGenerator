@@ -100,19 +100,18 @@ function deleteItemAll(){
 			//deleteItem(textarea);
 
 
-	alert('dataid for'+i+'is'+row.getAttribute('data-id'));
-	
-	xhrDelete(REST_DATA + '?id=' + row.getAttribute('data-id'), function(){
-	}, function(err){
-		console.error(err);
-	});
-	
-	
+			alert('dataid for'+i+'is'+row.getAttribute('data-id'));
 			
-	row.parentNode.removeChild(row);
+			xhrDelete(REST_DATA + '?id=' + row.getAttribute('data-id'), function(){
+			}, function(err){
+				console.error(err);
+			});
+
 		}
 
-	
+		for(i = 0; i < table.rows.length; i++){
+			row.parentNode.removeChild(row);
+		}
 	
 
 	
