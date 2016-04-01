@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--<title>Java DB Sample Application</title>-->
-<title>Narasa Kumar</title>
+<!--Author - Narasa Kumar-->
+<title>QR Code Generator</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
@@ -26,7 +26,14 @@
 
 <div id="QRCode" class="QRCode">
 	<input type="text" name="input_string" id="input_string_id" placeholder="Enter String to Generate QR Code">
-	<input type="button" value="Generate" onclick="generateQR()" name="go" id="go_id">
+	
+	<!--
+	<input type="button" value="Generate" onclick="generateQR()" name="go" id="go_id">-->
+	
+	 <button class='addBtn' onclick="generateQR()" title='Generate'>
+							<img src='images/generateButton.png' alt='Generate' />
+	</button>
+	
 	<br>
 </div>
 	<div id="qrcode" class="QRCodeElement"></div>
@@ -48,7 +55,12 @@
 							<img src='images/detail.png' alt='detail' />
 						</button>
 						 -->
-						 <input type="button" value="Clear All" onclick="deleteItemAll()" name="ClearAll" id="Clear">
+						 
+						 <button class='addBtn' onclick="deleteItemAll()" title='Clear All'>
+							<img src='images/ClearAll.png' alt='Clear All' />
+						</button>
+						 
+<!--						 <input type="button" value="Clear All" onclick="deleteItemAll()" name="ClearAll" id="Clear">-->
 
 					</div>
 				</header>
