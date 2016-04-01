@@ -179,7 +179,8 @@ button {
 	background: none;
 	border: none;
 	cursor: pointer;
-	bottom:2px;
+
+	left:30px;
 }
 
 .ClearBtn {
@@ -245,5 +246,5 @@ padding-left: 10%;
 align:"center"; 
 padding-bottom: 10px;
 padding-top: 10px;
-padding-left: 40%;
+padding-left: 30%;
 }
