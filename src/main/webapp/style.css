@@ -176,7 +176,7 @@ button {
 
 .Btn {
 	position: absolute;
-	
+		bottom: 20px;
 	
 	background: none;
 	border: none;
