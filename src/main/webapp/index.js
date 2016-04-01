@@ -119,7 +119,11 @@ function deleteItemAll(){
 			
 		}*/
 		
-		table.innerHTML="";
+		while(table.rows.length > 0) {
+  				table.deleteRow(0);
+		}
+		
+		//table.innerHTML="";
 
 }
 		
