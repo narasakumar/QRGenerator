@@ -179,12 +179,12 @@ button {
 	background: none;
 	border: none;
 	cursor: pointer;
+	bottom:2px;
 }
 
 .ClearBtn {
 	position: absolute;
 		bottom: 2px;
-	left: 10px;
 	background: none;
 	border: none;
 	cursor: pointer;
