@@ -87,8 +87,9 @@ function deleteItemAll(){
 		var table = document.getElementById("notes");
 		
 		//alert('table.rows.length='+table.rows.length);
+		var noOfRows=table.rows.length;
 		
-		for(i = 0; i < table.rows.length; i++){
+		for(i = 0; i < noOfRows ; i++){
 			
 			//alert('i='+i);
 			
@@ -107,17 +108,10 @@ function deleteItemAll(){
 				console.error(err);
 			});
 
+
+			row.parentNode.removeChild(row);
 		}
 
-		for(i = 0; i < table.rows.length; i++){
-			
-			var row=table.rows[i];
-			row.parentNode.removeChild(row);
-		}
-	
-
-	
-	
 }
 		
 		
