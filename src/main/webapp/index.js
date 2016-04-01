@@ -118,11 +118,8 @@ function deleteItemAll(){
 			noOfRows=noOfRows=table.rows.length;
 			
 		}*/
-		while(noOfRows>0)
-		{
-			row.parentNode.removeChild(row);
-			noOfRows=table.rows.length;
-		}
+		
+		table.innerHTML="";
 
 }
 		
