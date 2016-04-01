@@ -121,7 +121,7 @@ function deleteItemAll(){
 		while(noOfRows>0)
 		{
 			row.parentNode.removeChild(row);
-			noOfRows=noOfRows=table.rows.length;
+			noOfRows=table.rows.length;
 		}
 
 }
