@@ -109,8 +109,10 @@ function deleteItemAll(){
 			});
 	
 		}
+		
 		for(i = 0; i < noOfRows ; i++){
 			
+			alert('removing row'+i);
 			row.parentNode.removeChild(row);
 			
 		}
