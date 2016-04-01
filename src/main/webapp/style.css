@@ -162,7 +162,7 @@ button {
 	top: 0px;
 	background: none;
 	border: none;
-	cursor: pointer;s
+	cursor: pointer;
 }
 
 .addBtn {
@@ -173,6 +173,17 @@ button {
 	border: none;
 	cursor: pointer;
 }
+
+.Btn {
+	position: absolute;
+	
+	
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+
 
 .detailBtn img,.addBtn img {
 	
