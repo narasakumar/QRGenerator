@@ -176,8 +176,6 @@ button {
 
 .GenerateBtn {
 	position: absolute;
-		bottom: 2px;
-	
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -185,8 +183,8 @@ button {
 
 .ClearBtn {
 	position: absolute;
-		bottom: 5px;
-	
+		bottom: 2px;
+	left: 10px;
 	background: none;
 	border: none;
 	cursor: pointer;
