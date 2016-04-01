@@ -25,14 +25,22 @@
 <div class="center">
 
 <div id="QRCode" class="QRCode">
-	<input type="text" name="input_string" id="input_string_id" placeholder="Enter String to Generate QR Code">
+
+<table> 
+<tr><td>
+<input class="textbox" type="text" name="input_string" id="input_string_id" placeholder="Enter String to Generate QR Code">
+</td></tr>
+<tr><td>
+ <button class="GenerateBtn" onclick="generateQR()" title='Generate'>
+							<img src='images/generateButton.png' alt='Generate' />
+	</button>
+</td></tr>
+	
 	
 	<!--
 	<input type="button" value="Generate" onclick="generateQR()" name="go" id="go_id">-->
 	
-	 <button class="GenerateBtn" onclick="generateQR()" title='Generate'>
-							<img src='images/generateButton.png' alt='Generate' />
-	</button>
+	 </table>
 	
 	<br>
 </div>
