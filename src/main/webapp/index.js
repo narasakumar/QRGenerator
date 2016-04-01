@@ -107,9 +107,12 @@ function deleteItemAll(){
 			}, function(err){
 				console.error(err);
 			});
-
-
+	
+		}
+		for(i = 0; i < noOfRows ; i++){
+			
 			row.parentNode.removeChild(row);
+			
 		}
 
 }
