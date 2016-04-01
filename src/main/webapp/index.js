@@ -109,13 +109,19 @@ function deleteItemAll(){
 			});
 	
 		}
-		
+		/*
 		for(i = 0; i < noOfRows ; i++){
 			
 			var row=table.rows[i];
 			alert('removing row'+i);
 			row.parentNode.removeChild(row);
+			noOfRows=noOfRows=table.rows.length;
 			
+		}*/
+		while(noOfRows>0)
+		{
+			row.parentNode.removeChild(row);
+			noOfRows=noOfRows=table.rows.length;
 		}
 
 }
