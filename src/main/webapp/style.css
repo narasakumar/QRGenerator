@@ -179,8 +179,8 @@ button {
 	background: none;
 	border: none;
 	cursor: pointer;
-
-	left:30px;
+bottom:10%;
+	right:10%;
 }
 
 .ClearBtn {
