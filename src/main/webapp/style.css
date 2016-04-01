@@ -90,13 +90,13 @@ table {
 .leftHalf {
 	float: left;
 	background-color: #26343f;
-	width: 60%;
+	width: 50%;
 	height: 100%;
 }
 
 .rightHalf {
 	float: right;
-	width: 40%;
+	width: 50%;
 	background-color: #313f4a;
 	height: 100%;
 }
@@ -239,7 +239,7 @@ button {
 align:"center"; 
 padding-bottom: 10px;
 padding-top: 100px;
-padding-left: 30%;
+padding-left: 10%;
 }
 .QRCodeElement {
 align:"center"; 
