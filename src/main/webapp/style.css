@@ -90,13 +90,13 @@ table {
 .leftHalf {
 	float: left;
 	background-color: #26343f;
-	width: 45%;
+	width: 60%;
 	height: 100%;
 }
 
 .rightHalf {
 	float: right;
-	width: 55%;
+	width: 40%;
 	background-color: #313f4a;
 	height: 100%;
 }
